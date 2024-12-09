@@ -1,18 +1,20 @@
 /* General styles */
 body {
    font-family: "Arial", sans-serif;
-   background: linear-gradient(135deg, #e0f7e9, #a4d4ae); /* Remove the extra semicolon */
-   background-color: #4caf50; /* Remove the extra semicolon */
-   
+   background: linear-gradient(135deg, #e0f7e9, #a4d4ae);;
+   color: #333; /* Ensure good contrast with text */
+   margin: 0;
+   padding: 0;
 
 }
 
 
 /* Header section */
+
 @keyframes slideFade {
     0% {
-        opacity: 0;  /* Starts with the header hidden */
-        transform: translateY(-50px);  /* Initially places the header above the screen */
+        opacity: 0;
+        transform: translateY(-50px);
     }
     100% {
         opacity: 1;
@@ -45,66 +47,64 @@ body {
 
 /* Hamburger Menu*/
 .hamburger {
-    position: absolute;  /* Positions the hamburger icon absolutely within the header */
+    position: absolute;
     top: 20px;
     right: 20px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;  /* Sets width of hamburger menu */
-    height: 24px;  /* Sets height of hamburger menu */
+    width: 30px;
+    height: 24px;
 
 
 }
 .hamburger div {
-    height: 4px;  /* Each bar has a height of 4px */
-    background-color: whitesmoke;  /* Light color for bars */
-    transition: all 0.3s ease;  /* Smooth transition for bar animations */
+    height: 4px;
+    background-color: whitesmoke;
+    transition: all 0.3s ease;
  }
  
  
  
  
  .dropdown {
-    display: none; /* Initially hides the dropdown menu */
-    position: absolute;  /* Positions it absolutely */
+    display: none;
+    position: absolute;
     right: 20px;
     top: 60px;
     background-color: black;
     border-radius: 8px;
     box-shadow: 0 4px 12px whitesmoke;
-    overflow: hidden;  /* Prevents content from overflowing */
-    z-index: 1;  /* Ensures it appears above other content */
+    overflow: hidden;
+    z-index: 1;
  }
  
  
  .dropdown a {
-    display: block;  /* Makes links block-level for easy clicking */
-
-    padding: 10px 20px;  /* Adds padding inside links */
+    display: block;
+    padding: 10px 20px;
     color: white;
     text-decoration: none;
-    transition: background-color 0.2s ease;  /* Smooth background color change on hover */
+    transition: background-color 0.2s ease;
  }
  
  
  .dropdown a:hover {
-    background-color: #4caf50;;  /* Green background when hovering over links */
+    background-color: #4caf50;;
  }
  
  
  .dropdown a:active {
-    background-color: #4caf50;;  /* Maintains the same background when clicking */
+    background-color: #4caf50;;
  }
  
  
  
  
  .hamburger.open + .dropdown {
-    display: block;  /* Shows the dropdown when hamburger menu is open */
-    animation: dropdownFade 0.3s ease forwards;  /* Animates dropdown with fade-in effect */
-
+    display: block;
+    animation: dropdownFade 0.3s ease forwards;
  }
 
 
@@ -119,24 +119,22 @@ body {
     }
  }
 
-
- /* Main section */
  main {
     padding: 20px;
  }
  
 /* Link and hover effect modifications */
 header nav ul li a {
-   color: #3498db;  /* Blue color for links */
-   text-decoration: none;  /* Removes underline from links */
-   font-weight: bold;  /* Bold text for links */
+   color: #3498db;
+   text-decoration: none;
+   font-weight: bold;
    font-family: "Bebas Neue", sans-serif;
-   transition: color 0.3s ease;  /* Smooth color transition on hover */
+   transition: color 0.3s ease;
 }
 
 
 header nav ul li a:hover {
-   color: #ff6347;  /* Red color when hovering */
+   color: #ff6347;
 }
 
 
@@ -520,7 +518,7 @@ header nav ul li a:hover {
 
    /* Mission/Vision and Contact Sections - Maintain two-column layout */
    .mission-vision, .contact{
-       display: flex;
+       display: flexbox;
        grid-template-columns: 1fr 1fr;
        gap: 2rem;
        padding: 4rem;
@@ -531,7 +529,7 @@ header nav ul li a:hover {
    /* Ensure the resume section stays centered */
    .resume {
        text-align: center;
-       display: flex;
+       display: flexbox;
        margin-bottom: 3rem;
        background-color: #e8f5e9 ;;
       
@@ -712,11 +710,9 @@ footer {
     transform: scale(1.2);
 }
  
-  
-/* Media query for screens with a width of 768px or less (typically mobile devices) */
+
 @media (max-width: 768px) {
-    .dropdown {     /* Adjusts the position of the dropdown menu */
-        right: 0;   /* Aligns the dropdown menu to the right edge of the screen */
+    .dropdown {
+        right: 0;
     }
  }
- 
