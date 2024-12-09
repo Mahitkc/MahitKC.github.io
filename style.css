@@ -19,7 +19,7 @@ body {
     }
 }
 .header {
-    display: flex; /* Enables flexbox for centering */
+    display: flex;  /* Enables flexbox for centering */
     justify-content: center; /* Centers the content horizontally */
    align-items: center;  /* Centers the content vertically */
     height: 100px; /* Adjust height for header */
@@ -42,7 +42,7 @@ body {
 
 
 
-
+/* Hamburger Menu*/
 .hamburger {
     position: absolute;
     top: 20px;
