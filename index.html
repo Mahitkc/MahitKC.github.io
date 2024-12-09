@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mahit KC Portfolio</title>
+   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <header class="header">
+        <h1 class="site-name">MAHIT KC</h1>
+    </header>
+
+    
+   <header>
+       
+        
+        
+          
+       <div class="hamburger" onclick="toggleMenu()">
+       <div></div>
+       <div></div>
+       <div></div>
+       </div>
+       <div class="dropdown" id="dropdown-menu">
+    
+       
+           
+               <a href="#home">Home</a>
+               <a href="#about-me">About Me</a>
+               <a href="#skills">Skills</a>
+               <a href="#contact">Contact</a>
+               <a href="#resume">Resume</a>
+               <a href="#mission-vision">Mission/Vision</a>
+               <a href="#projects">My Projects</a>
+           
+</div>
+   </header>
+<main>
+
+   <section id="home" class="hero">
+       <div class="hero-content">
+           <h1>Your Vision, My Code</h1>
+           <p>Combining artistic innovation with technical expertise to develop websites that inspire and engage users. Best in Designing user interactive , user friendly and quality websites for the growth of your Business.</p>
+           <a href="#contact" class="cta">Contact Me</a>
+       </div>
+   </section>
+
+
+   <section id="about-me" class="about-me">
+    <div class="about-content">
+    <h2>About Me</h2>
+    <p>Welcome to my portfolio! I am a passionate junior web developer with a solid understanding of HTML, CSS, and JavaScript. I specialize in creating responsive and user-friendly websites. I am committed to constantly improving and always excited to take on new challenges.</p>
+    </div>
+</section>
+
+   <section id="skills" class="skills">
+    <div class="skills-container">
+       <h2>My Skills</h2>
+       <div class="skill-group">
+           <h3>Web Development</h3>
+           <p>HTML, CSS, JavaScript - Advanced</p>
+       </div>
+       <div class="skill-group">
+           <h3>Programming Languages</h3>
+           <p>Python, Java - Intermediate</p>
+       </div>
+       <div class="skill-group">
+           <h3>Interpersonal Skills</h3>
+           <p>Teamwork, Communication - Proficient</p>
+       </div>
+       <div class="skill-group">
+           <h3>Tools & Technologies</h3>
+           <p>Git, GitHub, Webpack - Proficient</p>
+       </div>
+    </div>
+   </section>
+
+
+   <section id="mission-vision" class="mission-vision" >
+    
+       <div class="Mission">
+        <h2 class>Mission</h2>
+       <p>Designing and constructing websites that are easy to use, helping businesses connect with their audiences. To enhance the business growth of our customer with creative Design and development to deliver market demanding solutions.</p>
+      </div>
+      <div class="Vision">
+       <h2>Vision</h2>
+       <p>A digital environment in which each website provides a distinct and influential user experience. I will play a crucial role in my client's success by working together with them to reach their strategic goals while generating enduring business value through the implementation and oversight of their technology.</p>
+   </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="projects-content">
+            <h2>My Projects</h2>
+            <div class="project-group">
+                <h3>Project One</h3>
+                <p>Description of Project One.</p>
+                <a href="https://www.example.com" class="project-link" target="_blank">View Project</a> <!-- Dummy link -->
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section id="resume" class="resume">
+        <h2>Resume</h2>
+        <a href="/ Files/Mahit_KC_Resume.pdf" download="Files/Mahit_KC_Resume.pdf" class="cta resume-cta">Download My Resume</a>
+
+    </section>
+    
+
+
+   <section id="contact" class="contact">
+    <div class="contact-container">
+       <h2>Contact</h2>
+       <p>Feel free to reach out to discuss your projects, collaborations, or anything creative! I'm available on LinkedIn, Instagram, and GitHub.</p>
+        <p>Phone: 782-100-0888</p>
+       </div>
+       <a href="mailto:Mahtkc17@gmail.com" class="email-cta">Email Me</a>
+    
+   </section>
+
+</main>
+   <footer>
+       <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+       <div class="social-links"></div>
+        <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i> <!-- LinkedIn Icon -->
+        </a>
+        <a href="https://www.instagram.com/your-profile" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+        </a>
+        <a href="https://github.com/Mahitkc/MahitKC.github.io.git" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i> <!-- GitHub Icon -->
+        </a>
+    </div>
+   </footer>
+
+   <script>
+
+    function toggleMenu() {
+           const hamburger = document.querySelector('.hamburger');
+           const dropdown = document.getElementById('dropdown-menu');
+          
+           hamburger.classList.toggle('open');
+           dropdown.style.display = hamburger.classList.contains('open') ? 'block' : 'none';
+       }
+
+       
+       window.onclick = function(event) {
+           if (!event.target.matches('.hamburger, .hamburger *')) {
+               const dropdown = document.getElementById('dropdown-menu');
+               const hamburger = document.querySelector('.hamburger');
+               if (hamburger.classList.contains('open')) {
+                   dropdown.style.display = 'none';
+                   hamburger.classList.remove('open');
+                }
+           }
+       };
+   </script>
+</body>
+</html>
