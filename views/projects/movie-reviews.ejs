@@ -1,145 +1,89 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/output.css" />
-  </head>
-  <body class="bg-gray-950 text-gray-100 font-sans antialiased">
+<%- include('../partials/project-header', { title: title, pageTitle: 'Movie Reviews', description: 'Movie Reviews — ASP.NET Core MVC Admin Application by Mahit KC' }) %>
 
-    <!-- ── NAV ── -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-950/90 backdrop-blur border-b border-gray-800">
-      <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
-        <a href="/" class="text-[#6B72FF] font-bold text-lg tracking-tight">MahitKC</a>
-        <a href="/#projects" class="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-          Back to Portfolio
-        </a>
-      </div>
-    </nav>
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
 
-    <main class="pt-24 pb-24 px-6">
-      <div class="max-w-4xl mx-auto">
-
-        <!-- Header -->
-        <div class="mb-12">
-          <div class="flex flex-wrap items-center gap-3 mb-4">
-            <span class="text-xs bg-[#02066F]/30 text-[#6B72FF] border border-[#02066F] px-3 py-1 rounded-full">ASP.NET Core</span>
-            <span class="text-xs bg-[#02066F]/30 text-[#6B72FF] border border-[#02066F] px-3 py-1 rounded-full">Full-Stack</span>
-            <span class="text-xs bg-[#02066F]/30 text-[#6B72FF] border border-[#02066F] px-3 py-1 rounded-full">MVC</span>
-          </div>
-          <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Movie Reviews</h1>
-          <p class="text-xl text-[#6B72FF] font-medium mb-6">ASP.NET Core MVC Admin Application</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="#" class="px-5 py-2.5 bg-[#02066F] hover:bg-[#0309A8] text-white text-sm font-semibold rounded-lg transition-colors">Live Demo</a>
-            <a href="#" class="px-5 py-2.5 border border-gray-700 hover:border-[#02066F] text-gray-300 hover:text-white text-sm font-semibold rounded-lg transition-colors">GitHub Repo</a>
-          </div>
-        </div>
-
-        <!-- Screenshot placeholder -->
-        <div class="w-full aspect-video bg-gray-900 border border-gray-800 rounded-2xl flex items-center justify-center mb-12 overflow-hidden">
-          <div class="text-center">
-            <svg class="w-12 h-12 text-gray-700 mx-auto mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3 20.25h18a.75.75 0 00.75-.75V6a.75.75 0 00-.75-.75H3a.75.75 0 00-.75.75v13.5c0 .414.336.75.75.75z"/>
-            </svg>
-            <p class="text-gray-600 text-sm">Screenshot coming soon</p>
-          </div>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-
-          <!-- Main content -->
-          <div class="md:col-span-2 space-y-10">
-
-            <!-- Problem -->
-            <div>
-              <h2 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                <span class="w-1.5 h-5 bg-[#02066F] rounded-full inline-block"></span>
-                The Problem
-              </h2>
-              <p class="text-gray-400 text-sm leading-relaxed">
-                Built a full-stack web application that allows administrators to manage a movie catalog and moderate user-submitted reviews. The challenge was to provide a secure, role-based platform where critics can write and score reviews, and admins have visibility into platform activity through a centralized dashboard — while also supporting soft-deletion of movies and image uploads.
-              </p>
+          <!-- Swiper image slider -->
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                { "loop": true, "speed": 600, "autoplay": { "delay": 5000 }, "slidesPerView": "auto", "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
+              </script>
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img src="https://via.placeholder.com/800x600?text=Movie+Reviews+Project" alt="Movie Reviews" class="img-fluid" loading="lazy">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
+          </div>
 
-            <!-- Role -->
-            <div>
-              <h2 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                <span class="w-1.5 h-5 bg-[#02066F] rounded-full inline-block"></span>
-                My Role
-              </h2>
-              <p class="text-gray-400 text-sm leading-relaxed mb-4">Sole developer. Designed and implemented the full application including:</p>
-              <ul class="text-gray-400 text-sm space-y-2">
-                <% [
-                  "Data models (Movie, Review, Genre, Rating, UserProfile) with EF Core migrations",
-                  "Role and user seeding services for Admin/Critic setup",
-                  "Admin dashboard with aggregate stats — total movies, reviews, average score, top genres",
-                  "CRUD for movies with soft-delete support (IsDeleted, DeletedAt)",
-                  "Review management with publish/unpublish control and score validation (0–5)",
-                  "Azure Blob Storage integration for movie poster uploads",
-                  "External REST API integration via HttpClient (MovieApiService)",
-                  "Cookie-based authentication with custom login and access-denied routes"
-                ].forEach(item => { %>
-                  <li class="flex items-start gap-2">
-                    <span class="text-[#6B72FF] mt-0.5 shrink-0">✓</span>
-                    <%= item %>
-                  </li>
-                <% }) %>
+          <!-- Project info sidebar -->
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-left" data-aos-delay="200">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong>: ASP.NET Core / Full-Stack</li>
+                <li><strong>Tech Stack</strong>: ASP.NET Core MVC, EF Core, Dapper, SQL Server</li>
+                <li><strong>Role</strong>: Sole Developer</li>
+                <li><strong>Cloud</strong>: Azure Blob Storage (Azurite local)</li>
+                <li><strong>GitHub</strong>: <a href="#">View Repo</a></li>
               </ul>
             </div>
-
-            <!-- Outcome -->
-            <div>
-              <h2 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                <span class="w-1.5 h-5 bg-[#02066F] rounded-full inline-block"></span>
-                Outcome
-              </h2>
-              <p class="text-gray-400 text-sm leading-relaxed">
-                Delivered a fully functional multi-role movie review platform with a working admin dashboard, secure authentication, external API integration, and cloud image storage — demonstrating end-to-end full-stack ASP.NET Core development with both EF Core and Dapper for data access.
-              </p>
-            </div>
-
           </div>
 
-          <!-- Sidebar -->
-          <div class="space-y-6">
+          <!-- Full description -->
+          <div class="col-lg-12">
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Movie Reviews — ASP.NET Core MVC Admin Application</h2>
+              <p>Built a full-stack web application that allows administrators to manage a movie catalog and moderate user-submitted reviews. The challenge was to provide a secure, role-based platform where critics can write and score reviews, and admins have visibility into platform activity through a centralized dashboard — while also supporting soft-deletion of movies and image uploads.</p>
+              <p>As the sole developer I designed and implemented everything from data models and EF Core migrations, to role seeding, the admin dashboard, Azure Blob Storage integration, external REST API consumption, and cookie-based authentication with custom routes.</p>
 
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
-              <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Tech Stack</h3>
-              <div class="flex flex-wrap gap-2">
-                <% [
-                  "ASP.NET Core MVC",".NET","C#",
-                  "Entity Framework Core","Dapper","SQL Server",
-                  "ASP.NET Core Identity","Azure Blob Storage","Azurite",
-                  "HttpClient","Bootstrap","Razor Views"
-                ].forEach(t => { %>
-                  <span class="bg-[#02066F]/30 text-[#8B8FFF] text-xs px-2.5 py-1 rounded-full border border-[#02066F]"><%= t %></span>
-                <% }) %>
+              <div class="features mt-4">
+                <h3>Key Features</h3>
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                      <i class="bi bi-shield-lock-fill"></i>
+                      <h4>Role-Based Auth</h4>
+                      <p>Admin and Critic roles with ASP.NET Core Identity — cookie-based login with custom access-denied routes.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
+                      <i class="bi bi-speedometer2"></i>
+                      <h4>Admin Dashboard</h4>
+                      <p>Aggregate stats: total movies, total reviews, average score, top genres, and recent activity — all in one view.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
+                      <i class="bi bi-cloud-upload-fill"></i>
+                      <h4>Azure Blob Storage</h4>
+                      <p>Movie poster uploads stored in Azure Blob Storage with Azurite for local development.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="700">
+                      <i class="bi bi-database-fill"></i>
+                      <h4>EF Core + Dapper</h4>
+                      <p>Code-first migrations with EF Core for full CRUD, and Dapper for lightweight read queries — soft-delete on movies (IsDeleted, DeletedAt).</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <h3>Tech Stack</h3>
+                <p>ASP.NET Core MVC &bull; .NET &bull; C# &bull; Entity Framework Core &bull; Dapper &bull; SQL Server &bull; ASP.NET Core Identity &bull; Azure Blob Storage &bull; Azurite &bull; HttpClient &bull; Bootstrap &bull; Razor Views</p>
               </div>
             </div>
-
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
-              <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Highlights</h3>
-              <ul class="text-gray-400 text-sm space-y-2">
-                <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> Multi-role auth (Admin, Critic)</li>
-                <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> Admin dashboard with stats</li>
-                <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> Soft-delete for movies</li>
-                <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> Azure Blob image uploads</li>
-                <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> External REST API integration</li>
-                <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> EF Core + Dapper dual ORM</li>
-              </ul>
-            </div>
-
           </div>
+
         </div>
-
       </div>
-    </main>
+    </section>
 
-    <footer class="border-t border-gray-800 py-6 text-center text-sm text-gray-600">
-      &copy; <%= new Date().getFullYear() %> Mahit KC. Built with Express v5 &amp; Tailwind CSS v4.
-    </footer>
-
-  </body>
-</html>
+<%- include('../partials/project-footer') %>

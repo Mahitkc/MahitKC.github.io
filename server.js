@@ -39,6 +39,15 @@ app.get('/api/hello', (req, res) => {
   res.json({ message: 'Hello from Express v5!' })
 })
 
+app.post('/api/contact', (req, res) => {
+  const { name, email, subject, message } = req.body
+  if (!name || !email || !subject || !message) {
+    return res.status(400).json({ error: 'All fields are required.' })
+  }
+  // TODO: integrate an email service (e.g. nodemailer) here
+  res.json({ success: true })
+})
+
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`)
 })

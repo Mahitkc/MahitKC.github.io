@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title><%= title %></title>
+  <meta name="description" content="<%= typeof description !== 'undefined' ? description : 'Mahit KC — Web Developer' %>">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Ubuntu:wght@300;400;500;700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
+</head>
+<body class="portfolio-details-page">
+
+  <header id="header" class="header dark-background d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <div class="header-container d-flex flex-column align-items-start">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/#hero"><i class="bi bi-house navicon"></i> Home</a></li>
+          <li><a href="/#about"><i class="bi bi-person navicon"></i> About</a></li>
+          <li><a href="/#skills"><i class="bi bi-tools navicon"></i> Skills</a></li>
+          <li><a href="/#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+          <li><a href="/#portfolio" class="active"><i class="bi bi-images navicon"></i> Work Samples</a></li>
+          <li><a href="/#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        </ul>
+      </nav>
+      <div class="social-links text-center">
+        <a href="https://linkedin.com/in/mahitkc" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/MahitKC" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0"><%= pageTitle %></h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#portfolio">Work Samples</a></li>
+            <li class="current"><%= pageTitle %></li>
+          </ol>
+        </nav>
+      </div>
+    </div>

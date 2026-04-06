@@ -1,4 +1,5 @@
 node_modules/
 public/output.css
+# Keep public/assets (copied from SnapFolio)
 .env
 .env.*

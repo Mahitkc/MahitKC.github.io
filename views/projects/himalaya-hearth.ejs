@@ -1,139 +1,89 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/output.css" />
-  </head>
-  <body class="bg-gray-950 text-gray-100 font-sans antialiased">
+<%- include('../partials/project-header', { title: title, pageTitle: 'Himalaya Hearth', description: 'Himalaya Hearth — Custom WordPress Travel Site by Mahit KC' }) %>
 
-    <!-- ── NAV ── -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-950/90 backdrop-blur border-b border-gray-800">
-      <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
-        <a href="/" class="text-[#6B72FF] font-bold text-lg tracking-tight">MahitKC</a>
-        <a href="/#projects" class="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-          Back to Portfolio
-        </a>
-      </div>
-    </nav>
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
 
-    <main class="pt-24 pb-24 px-6">
-      <div class="max-w-4xl mx-auto">
-
-        <!-- Header -->
-        <div class="mb-12">
-          <div class="flex flex-wrap items-center gap-3 mb-4">
-            <span class="text-xs bg-[#02066F]/30 text-[#6B72FF] border border-[#02066F] px-3 py-1 rounded-full">WordPress</span>
-            <span class="text-xs bg-[#02066F]/30 text-[#6B72FF] border border-[#02066F] px-3 py-1 rounded-full">PHP</span>
-          </div>
-          <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Himalaya Hearth</h1>
-          <p class="text-xl text-[#6B72FF] font-medium mb-6">Custom WordPress Travel Site</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="#" class="px-5 py-2.5 bg-[#02066F] hover:bg-[#0309A8] text-white text-sm font-semibold rounded-lg transition-colors">Live Demo</a>
-            <a href="#" class="px-5 py-2.5 border border-gray-700 hover:border-[#02066F] text-gray-300 hover:text-white text-sm font-semibold rounded-lg transition-colors">GitHub Repo</a>
-          </div>
-        </div>
-
-        <!-- Screenshot placeholder -->
-        <div class="w-full aspect-video bg-gray-900 border border-gray-800 rounded-2xl flex items-center justify-center mb-12 overflow-hidden">
-          <div class="text-center">
-            <svg class="w-12 h-12 text-gray-700 mx-auto mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3 20.25h18a.75.75 0 00.75-.75V6a.75.75 0 00-.75-.75H3a.75.75 0 00-.75.75v13.5c0 .414.336.75.75.75z"/>
-            </svg>
-            <p class="text-gray-600 text-sm">Screenshot coming soon</p>
-          </div>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-
-          <!-- Main content -->
-          <div class="md:col-span-2 space-y-10">
-
-            <!-- Problem -->
-            <div>
-              <h2 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                <span class="w-1.5 h-5 bg-[#02066F] rounded-full inline-block"></span>
-                The Problem
-              </h2>
-              <p class="text-gray-400 text-sm leading-relaxed">
-                A Nepal-focused travel brand needed a content-managed website to showcase and sell curated tour packages. The site required a structured way to create, organize, and display tours — each with its own pricing, duration, location, description, and imagery — without relying on a generic page builder.
-              </p>
+          <!-- Swiper image slider -->
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                { "loop": true, "speed": 600, "autoplay": { "delay": 5000 }, "slidesPerView": "auto", "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
+              </script>
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img src="https://via.placeholder.com/800x600?text=Himalaya+Hearth+Project" alt="Himalaya Hearth" class="img-fluid" loading="lazy">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
+          </div>
 
-            <!-- Role -->
-            <div>
-              <h2 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                <span class="w-1.5 h-5 bg-[#02066F] rounded-full inline-block"></span>
-                My Role
-              </h2>
-              <p class="text-gray-400 text-sm leading-relaxed mb-4">Built the theme from scratch as a custom GeneratePress child theme. Responsibilities included:</p>
-              <ul class="text-gray-400 text-sm space-y-2">
-                <% [
-                  "Registering a tour Custom Post Type (CPT) with archive support and REST API exposure",
-                  "Creating a responsive archive page (archive-tour.php) with CSS Grid card layout and hover animations",
-                  "Building a single tour detail page (single-tour.php) displaying ACF fields as styled badges",
-                  "Dynamically queried 'Related Tours' section to surface more of the catalog",
-                  "Writing all PHP templates, enqueueing styles/scripts, and configuring metadata"
-                ].forEach(item => { %>
-                  <li class="flex items-start gap-2">
-                    <span class="text-[#6B72FF] mt-0.5 shrink-0">✓</span>
-                    <%= item %>
-                  </li>
-                <% }) %>
+          <!-- Project info sidebar -->
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-left" data-aos-delay="200">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong>: WordPress / PHP</li>
+                <li><strong>Tech Stack</strong>: WordPress, PHP, GeneratePress, ACF, Tailwind CSS</li>
+                <li><strong>Role</strong>: Sole Developer</li>
+                <li><strong>Dev Environment</strong>: Local by Flywheel</li>
+                <li><strong>GitHub</strong>: <a href="#">View Repo</a></li>
               </ul>
             </div>
-
-            <!-- Outcome -->
-            <div>
-              <h2 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                <span class="w-1.5 h-5 bg-[#02066F] rounded-full inline-block"></span>
-                Outcome
-              </h2>
-              <p class="text-gray-400 text-sm leading-relaxed">
-                A fully functional, CMS-driven tour listing and detail system where the client can add and edit tour packages entirely from the WordPress admin. Each tour page displays structured metadata, rich content, and contextual links to related tours — reducing bounce rate and surfacing more of the catalog to visitors.
-              </p>
-            </div>
-
           </div>
 
-          <!-- Sidebar -->
-          <div class="space-y-6">
+          <!-- Full description -->
+          <div class="col-lg-12">
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Himalaya Hearth — Custom WordPress Travel Site</h2>
+              <p>A Nepal-focused travel brand needed a content-managed website to showcase and sell curated tour packages. The site required a structured way to create, organize, and display tours — each with its own pricing, duration, location, description, and imagery — without relying on a generic page builder.</p>
+              <p>I built the theme from scratch as a custom GeneratePress child theme, registering a Tour Custom Post Type with archive support and REST API exposure, and creating fully templated archive and single views using PHP template hierarchy.</p>
 
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
-              <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Tech Stack</h3>
-              <div class="flex flex-wrap gap-2">
-                <% [
-                  "WordPress","PHP","GeneratePress",
-                  "Advanced Custom Fields","Tailwind CSS (CDN)",
-                  "Custom CSS","WordPress Template Hierarchy","REST API"
-                ].forEach(t => { %>
-                  <span class="bg-[#02066F]/30 text-[#8B8FFF] text-xs px-2.5 py-1 rounded-full border border-[#02066F]"><%= t %></span>
-                <% }) %>
+              <div class="features mt-4">
+                <h3>Key Features</h3>
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                      <i class="bi bi-grid-3x3-gap-fill"></i>
+                      <h4>Custom Post Type</h4>
+                      <p>Tour CPT registered with archive support, REST API exposure, and custom rewrite rules.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
+                      <i class="bi bi-tags-fill"></i>
+                      <h4>ACF Metadata Badges</h4>
+                      <p>Price, duration, and location stored as Advanced Custom Fields and rendered as styled badges on the single tour page.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
+                      <i class="bi bi-layout-three-columns"></i>
+                      <h4>CSS Grid Archive</h4>
+                      <p>archive-tour.php with a responsive CSS grid card layout, hover animations, and a contact CTA.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="700">
+                      <i class="bi bi-arrow-repeat"></i>
+                      <h4>Related Tours</h4>
+                      <p>Dynamically queried related tours section on single-tour.php to reduce bounce rate and surface more catalog.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <h3>Tech Stack</h3>
+                <p>WordPress (self-hosted) &bull; PHP &bull; GeneratePress (parent theme) &bull; Advanced Custom Fields (ACF) &bull; Tailwind CSS (CDN) &bull; Custom CSS &bull; WordPress Template Hierarchy &bull; REST API &bull; Local by Flywheel</p>
               </div>
             </div>
-
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
-              <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Highlights</h3>
-              <ul class="text-gray-400 text-sm space-y-2">
-                <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> Custom CPT with archive &amp; REST API</li>
-                <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> ACF metadata badges per tour</li>
-                <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> CSS Grid card layout</li>
-                <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> Related Tours dynamic query</li>
-                <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> Full CMS admin control</li>
-              </ul>
-            </div>
-
           </div>
+
         </div>
-
       </div>
-    </main>
+    </section>
 
-    <footer class="border-t border-gray-800 py-6 text-center text-sm text-gray-600">
-      &copy; <%= new Date().getFullYear() %> Mahit KC. Built with Express v5 &amp; Tailwind CSS v4.
-    </footer>
-
-  </body>
-</html>
+<%- include('../partials/project-footer') %>

@@ -1,147 +1,89 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/output.css" />
-  </head>
-  <body class="bg-gray-950 text-gray-100 font-sans antialiased">
+<%- include('../partials/project-header', { title: title, pageTitle: 'WaitWell', description: 'WaitWell — Patient Communication & Queue Management Platform by Mahit KC' }) %>
 
-    <!-- ── NAV ── -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-950/90 backdrop-blur border-b border-gray-800">
-      <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
-        <a href="/" class="text-[#6B72FF] font-bold text-lg tracking-tight">MahitKC</a>
-        <a href="/#projects" class="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-          Back to Portfolio
-        </a>
-      </div>
-    </nav>
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
 
-    <main class="pt-24 pb-24 px-6">
-      <div class="max-w-4xl mx-auto">
-
-        <!-- Header -->
-        <div class="mb-12">
-          <div class="flex flex-wrap items-center gap-3 mb-4">
-            <span class="text-xs bg-[#02066F]/30 text-[#6B72FF] border border-[#02066F] px-3 py-1 rounded-full">SaaS</span>
-            <span class="text-xs bg-[#02066F]/30 text-[#6B72FF] border border-[#02066F] px-3 py-1 rounded-full">Full-Stack</span>
-          </div>
-          <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">WaitWell</h1>
-          <p class="text-xl text-[#6B72FF] font-medium mb-6">Patient Communication &amp; Queue Management Platform</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="#" class="px-5 py-2.5 bg-[#02066F] hover:bg-[#0309A8] text-white text-sm font-semibold rounded-lg transition-colors">Live Demo</a>
-            <a href="https://github.com/NSCC-ITC-Winter2026-WEBD3031-700-MCa/project-waitwell" target="_blank" rel="noopener noreferrer"
-               class="px-5 py-2.5 border border-gray-700 hover:border-[#02066F] text-gray-300 hover:text-white text-sm font-semibold rounded-lg transition-colors">
-              GitHub Repo
-            </a>
-          </div>
-        </div>
-
-        <!-- Screenshot placeholder -->
-        <div class="w-full aspect-video bg-gray-900 border border-gray-800 rounded-2xl flex items-center justify-center mb-12 overflow-hidden">
-          <div class="text-center">
-            <svg class="w-12 h-12 text-gray-700 mx-auto mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3 20.25h18a.75.75 0 00.75-.75V6a.75.75 0 00-.75-.75H3a.75.75 0 00-.75.75v13.5c0 .414.336.75.75.75z"/>
-            </svg>
-            <p class="text-gray-600 text-sm">Screenshot coming soon</p>
-          </div>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-
-          <!-- Main content -->
-          <div class="md:col-span-2 space-y-10">
-
-            <!-- Problem -->
-            <div>
-              <h2 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                <span class="w-1.5 h-5 bg-[#02066F] rounded-full inline-block"></span>
-                The Problem
-              </h2>
-              <p class="text-gray-400 text-sm leading-relaxed">
-                Hospital patients and their families often experience significant anxiety because they have no visibility into where they are in the care process — whether they're waiting for a doctor, a test, or discharge. WaitWell solves this by providing a real-time visit progress tracker that keeps patients informed at every step, reducing uncertainty and improving the overall care experience.
-              </p>
+          <!-- Swiper image slider -->
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                { "loop": true, "speed": 600, "autoplay": { "delay": 5000 }, "slidesPerView": "auto", "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
+              </script>
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img src="https://via.placeholder.com/800x600?text=WaitWell+Project" alt="WaitWell" class="img-fluid" loading="lazy">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
+          </div>
 
-            <!-- Role -->
-            <div>
-              <h2 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                <span class="w-1.5 h-5 bg-[#02066F] rounded-full inline-block"></span>
-                My Role
-              </h2>
-              <p class="text-gray-400 text-sm leading-relaxed mb-4">Full-stack developer and project maintainer. Responsibilities included:</p>
-              <ul class="text-gray-400 text-sm space-y-2">
-                <% [
-                  "Architecting the real-time visit progress dashboard",
-                  "AI-powered health chat feature with per-user rate limiting",
-                  "Supabase database schema and Row-Level Security (RLS) policies",
-                  "Stripe subscription integration with gated access tiers",
-                  "Admin dashboard with Role-Based Access Control (RBAC)",
-                  "Web Push notification delivery pipeline",
-                  "CI/CD pipeline, code quality standards, and developer workflow"
-                ].forEach(item => { %>
-                  <li class="flex items-start gap-2">
-                    <span class="text-[#6B72FF] mt-0.5 shrink-0">✓</span>
-                    <%= item %>
-                  </li>
-                <% }) %>
+          <!-- Project info sidebar -->
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-left" data-aos-delay="200">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong>: SaaS / Full-Stack</li>
+                <li><strong>Tech Stack</strong>: Next.js 16, TypeScript, Supabase, Stripe</li>
+                <li><strong>Role</strong>: Full-Stack Developer &amp; Maintainer</li>
+                <li><strong>Status</strong>: Production-ready</li>
+                <li><strong>GitHub</strong>: <a href="https://github.com/NSCC-ITC-Winter2026-WEBD3031-700-MCa/project-waitwell" target="_blank" rel="noopener noreferrer">View Repo</a></li>
               </ul>
             </div>
-
-            <!-- Outcome -->
-            <div>
-              <h2 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                <span class="w-1.5 h-5 bg-[#02066F] rounded-full inline-block"></span>
-                Outcome
-              </h2>
-              <p class="text-gray-400 text-sm leading-relaxed">
-                Delivered a production-ready SaaS web application with authenticated multi-role user access (patient, admin), live queue status updates, an AI health assistant, Stripe-gated subscription tiers, and push notifications — deployed on Vercel. The project followed professional industry workflows including Agile sprints, conventional commits, protected branches, automated CI on every pull request, and full unit test coverage of core logic and components.
-              </p>
-            </div>
-
           </div>
 
-          <!-- Sidebar -->
-          <div class="space-y-6">
+          <!-- Full description -->
+          <div class="col-lg-12">
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>WaitWell — Patient Communication &amp; Queue Management Platform</h2>
+              <p>Hospital patients and their families often experience significant anxiety because they have no visibility into where they are in the care process — whether they're waiting for a doctor, a test, or discharge. WaitWell solves this by providing a real-time visit progress tracker that keeps patients informed at every step, reducing uncertainty and improving the overall care experience.</p>
+              <p>As the full-stack developer and project maintainer, I was responsible for the complete architecture and implementation: the real-time dashboard, AI-powered health chat with per-user rate limiting, Supabase database schema with Row-Level Security, Stripe subscription billing, admin dashboard with RBAC, Web Push notifications, and a full CI/CD pipeline with automated testing on every PR.</p>
 
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
-              <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Tech Stack</h3>
-              <div class="flex flex-wrap gap-2">
-                <% [
-                  "Next.js 16","TypeScript","Tailwind v4","shadcn/ui",
-                  "Supabase","PostgreSQL","RLS","Stripe",
-                  "OpenRouter AI","Vercel AI SDK","Web Push",
-                  "Vitest","React Testing Library",
-                  "GitHub Actions","ESLint","Prettier","Husky"
-                ].forEach(t => { %>
-                  <span class="bg-[#02066F]/30 text-[#8B8FFF] text-xs px-2.5 py-1 rounded-full border border-[#02066F]"><%= t %></span>
-                <% }) %>
+              <div class="features mt-4">
+                <h3>Key Features</h3>
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                      <i class="bi bi-person-check-fill"></i>
+                      <h4>Multi-Role Authentication</h4>
+                      <p>Patient and Admin roles via ASP.NET Core Identity with RBAC — each role sees only what they're permitted to access.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
+                      <i class="bi bi-robot"></i>
+                      <h4>AI Health Chat</h4>
+                      <p>OpenRouter API (Claude model) with Vercel AI SDK — rate-limited per user to prevent abuse.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
+                      <i class="bi bi-credit-card"></i>
+                      <h4>Stripe Subscription Billing</h4>
+                      <p>Gated subscription tiers managed through Stripe with webhook-driven access control.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="700">
+                      <i class="bi bi-github"></i>
+                      <h4>CI/CD &amp; Testing</h4>
+                      <p>GitHub Actions pipeline with Vitest and React Testing Library — full unit test coverage of core logic and components.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <h3>Tech Stack</h3>
+                <p>Next.js 16 (App Router) &bull; TypeScript &bull; Tailwind CSS v4 &bull; shadcn/ui &bull; Supabase (PostgreSQL + RLS + Auth) &bull; OpenRouter AI &bull; Vercel AI SDK &bull; Stripe &bull; Web Push API &bull; Vitest &bull; React Testing Library &bull; GitHub Actions &bull; ESLint &bull; Prettier &bull; Husky &bull; commitlint</p>
               </div>
             </div>
-
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
-              <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Highlights</h3>
-              <ul class="text-gray-400 text-sm space-y-2">
-                <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> Multi-role auth with RBAC</li>
-                <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> AI chat with rate limiting</li>
-                <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> Stripe subscription billing</li>
-                <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> Web Push notifications</li>
-                <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> Full CI/CD pipeline</li>
-                <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> Unit test coverage</li>
-              </ul>
-            </div>
-
           </div>
+
         </div>
-
       </div>
-    </main>
+    </section>
 
-    <footer class="border-t border-gray-800 py-6 text-center text-sm text-gray-600">
-      &copy; <%= new Date().getFullYear() %> Mahit KC. Built with Express v5 &amp; Tailwind CSS v4.
-    </footer>
-
-  </body>
-</html>
+<%- include('../partials/project-footer') %>
