@@ -11,13 +11,16 @@
     "css:watch": "tailwindcss -i src/input.css -o public/output.css --watch",
     "css:build": "tailwindcss -i src/input.css -o public/output.css --minify"
   },
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
+    "@tailwindcss/cli": "latest",
+    "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "ejs": "^3.1.10"
+    "tailwindcss": "latest"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "latest",
-    "concurrently": "^9.1.0",
-    "tailwindcss": "latest"
+    "concurrently": "^9.1.0"
   }
 }

@@ -8,22 +8,22 @@ importers:
 
   .:
     dependencies:
+      '@tailwindcss/cli':
+        specifier: latest
+        version: 4.2.2
       ejs:
         specifier: ^3.1.10
         version: 3.1.10
       express:
         specifier: ^5.1.0
         version: 5.2.1
-    devDependencies:
-      '@tailwindcss/cli':
-        specifier: latest
-        version: 4.2.2
-      concurrently:
-        specifier: ^9.1.0
-        version: 9.2.1
       tailwindcss:
         specifier: latest
         version: 4.2.2
+    devDependencies:
+      concurrently:
+        specifier: ^9.1.0
+        version: 9.2.1
 
 packages:
 

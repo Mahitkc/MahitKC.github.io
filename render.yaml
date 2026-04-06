@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: mahitkc-portfolio
+    runtime: node
+    buildCommand: pnpm install && pnpm run build
+    startCommand: pnpm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 20
