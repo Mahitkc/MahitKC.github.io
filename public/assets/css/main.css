@@ -601,17 +601,6 @@ section,
 
 .hero .hero-text h1 .accent-text {
   color: var(--accent-color);
-  position: relative;
-}
-
-.hero .hero-text h1 .accent-text::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 50%));
 }
 
 .hero .hero-text h2 {
@@ -630,8 +619,6 @@ section,
 .hero .hero-text .lead span {
   color: var(--accent-color);
   font-weight: 600;
-  border-bottom: 2px solid var(--accent-color);
-  padding-bottom: 2px;
 }
 
 .hero .hero-text .description {
