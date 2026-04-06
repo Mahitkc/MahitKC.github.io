@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/output.css" />
+  </head>
+  <body class="bg-gray-950 text-gray-100 font-sans antialiased">
+
+    <!-- ── NAV ─────────────────────────────────────────────────────── -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-950/90 backdrop-blur border-b border-gray-800">
+      <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+        <span class="text-[#6B72FF] font-bold text-lg tracking-tight">MahitKC</span>
+        <ul class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+          <li><a href="#about"        class="hover:text-[#6B72FF] transition-colors">About</a></li>
+          <li><a href="#skills"       class="hover:text-[#6B72FF] transition-colors">Skills</a></li>
+          <li><a href="#projects"     class="hover:text-[#6B72FF] transition-colors">Projects</a></li>
+          <li><a href="#experience"   class="hover:text-[#6B72FF] transition-colors">Experience</a></li>
+          <li><a href="#education"    class="hover:text-[#6B72FF] transition-colors">Education</a></li>
+          <li><a href="#certifications" class="hover:text-[#6B72FF] transition-colors">Certs</a></li>
+          <li><a href="#contact"      class="hover:text-[#6B72FF] transition-colors">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ── HERO ─────────────────────────────────────────────────────── -->
+    <section id="about" class="min-h-screen flex items-center justify-center pt-20 px-6">
+      <div class="max-w-3xl text-center">
+        <p class="text-[#6B72FF] font-semibold tracking-widest uppercase text-sm mb-4">Web Developer</p>
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
+          Mahit KC
+        </h1>
+        <p class="text-gray-400 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
+          Web Developer with experience across front-end and back-end using JavaScript, PHP, MySQL,
+          React, and WordPress. Built database-driven web apps, optimized legacy PHP services, and
+          improved UI consistency in Agile teams. Strong foundation in Linux/Windows administration,
+          security best practices, and collaborative development.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-400 mb-10">
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-[#6B72FF]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Bedford, Nova Scotia
+          </span>
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-[#6B72FF]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            782-774-9867
+          </span>
+          <a href="mailto:Mahitkc@gmail.com" class="flex items-center gap-2 hover:text-[#6B72FF] transition-colors">
+            <svg class="w-4 h-4 text-[#6B72FF]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            Mahitkc@gmail.com
+          </a>
+        </div>
+        <div class="flex justify-center gap-4">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+             class="px-5 py-2.5 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-semibold text-sm transition-colors">
+            LinkedIn
+          </a>
+          <a href="https://github.com/MahitKC" target="_blank" rel="noopener noreferrer"
+             class="px-5 py-2.5 border border-gray-800 hover:border-gray-700 text-gray-300 hover:text-white rounded-lg font-semibold text-sm transition-colors">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SKILLS ────────────────────────────────────────────────────── -->
+    <section id="skills" class="py-24 px-6 bg-gray-900">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-white mb-12 text-center">Skills</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div class="bg-gray-800 rounded-2xl p-6 border border-gray-800">
+            <h3 class="text-[#6B72FF] font-semibold mb-4 uppercase text-xs tracking-widest">Languages &amp; Frameworks</h3>
+            <div class="flex flex-wrap gap-2">
+              <% ["JavaScript","PHP","HTML","CSS","React","Vue","WordPress","SASS/SCSS"].forEach(s => { %>
+                <span class="bg-gray-700 text-gray-200 text-xs px-3 py-1 rounded-full"><%= s %></span>
+              <% }) %>
+            </div>
+          </div>
+
+          <div class="bg-gray-800 rounded-2xl p-6 border border-gray-800">
+            <h3 class="text-[#6B72FF] font-semibold mb-4 uppercase text-xs tracking-widest">Database</h3>
+            <div class="flex flex-wrap gap-2">
+              <% ["SQL / MySQL","CRUD","Schema Design","Performance Basics"].forEach(s => { %>
+                <span class="bg-gray-700 text-gray-200 text-xs px-3 py-1 rounded-full"><%= s %></span>
+              <% }) %>
+            </div>
+          </div>
+
+          <div class="bg-gray-800 rounded-2xl p-6 border border-gray-800">
+            <h3 class="text-[#6B72FF] font-semibold mb-4 uppercase text-xs tracking-widest">Web &amp; App</h3>
+            <div class="flex flex-wrap gap-2">
+              <% ["REST APIs","JSON","DOM Manipulation","Responsive Design","Accessibility","Secure Coding"].forEach(s => { %>
+                <span class="bg-gray-700 text-gray-200 text-xs px-3 py-1 rounded-full"><%= s %></span>
+              <% }) %>
+            </div>
+          </div>
+
+          <div class="bg-gray-800 rounded-2xl p-6 border border-gray-800">
+            <h3 class="text-[#6B72FF] font-semibold mb-4 uppercase text-xs tracking-widest">System &amp; Cloud</h3>
+            <div class="flex flex-wrap gap-2">
+              <% ["Linux","Windows Admin","VMware","AWS","Azure","Virtualization","NTFS Permissions"].forEach(s => { %>
+                <span class="bg-gray-700 text-gray-200 text-xs px-3 py-1 rounded-full"><%= s %></span>
+              <% }) %>
+            </div>
+          </div>
+
+          <div class="bg-gray-800 rounded-2xl p-6 border border-gray-800">
+            <h3 class="text-[#6B72FF] font-semibold mb-4 uppercase text-xs tracking-widest">Version Control</h3>
+            <div class="flex flex-wrap gap-2">
+              <% ["Git","GitHub","Branching","Pull Requests","Code Reviews"].forEach(s => { %>
+                <span class="bg-gray-700 text-gray-200 text-xs px-3 py-1 rounded-full"><%= s %></span>
+              <% }) %>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ──────────────────────────────────────────────────── -->
+    <section id="projects" class="py-24 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-white mb-4 text-center">Work Samples</h2>
+        <p class="text-center text-gray-500 text-sm mb-12">A selection of projects built end-to-end</p>
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+          <!-- ── Project 1: WaitWell ── -->
+          <div class="flex flex-col bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-[#02066F] transition-colors group">
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <h3 class="text-xl font-bold text-white leading-snug">WaitWell</h3>
+              <span class="shrink-0 text-xs bg-[#02066F]/30 text-[#6B72FF] border border-[#02066F] px-2.5 py-1 rounded-full">SaaS</span>
+            </div>
+            <p class="text-[#6B72FF] text-sm font-medium mb-3">Patient Communication &amp; Queue Management Platform</p>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+              Real-time hospital visit progress tracker that keeps patients informed at every step of their care journey — reducing anxiety through live queue updates, an AI health assistant, Stripe-gated tiers, and push notifications.
+            </p>
+            <!-- Outcome badges -->
+            <ul class="text-gray-400 text-xs space-y-1 mb-5">
+              <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> Multi-role auth (patient, admin) with RBAC</li>
+              <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> AI health chat with per-user rate limiting</li>
+              <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> CI/CD via GitHub Actions, full unit test coverage</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <% ["Next.js 16","TypeScript","Tailwind v4","Supabase","Stripe","OpenRouter AI","Vercel AI SDK","Web Push","Vitest"].forEach(t => { %>
+                <span class="bg-[#02066F]/30 text-[#8B8FFF] text-xs px-2.5 py-1 rounded-full border border-[#02066F]"><%= t %></span>
+              <% }) %>
+            </div>
+            <div class="flex flex-wrap gap-3 mt-auto">
+              <a href="#" class="text-xs font-semibold text-white bg-[#02066F] hover:bg-[#0309A8] px-4 py-2 rounded-lg transition-colors">Live Demo</a>
+              <a href="https://github.com/NSCC-ITC-Winter2026-WEBD3031-700-MCa/project-waitwell" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-gray-400 hover:text-white border border-gray-700 hover:border-[#02066F] px-4 py-2 rounded-lg transition-colors">GitHub</a>
+              <a href="/projects/waitwell" class="text-xs font-semibold text-[#6B72FF] hover:text-white border border-[#02066F] hover:border-[#6B72FF] px-4 py-2 rounded-lg transition-colors">Learn More →</a>
+            </div>
+          </div>
+
+          <!-- ── Project 2: Himalaya Hearth ── -->
+          <div class="flex flex-col bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-[#02066F] transition-colors group">
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <h3 class="text-xl font-bold text-white leading-snug">Himalaya Hearth</h3>
+              <span class="shrink-0 text-xs bg-[#02066F]/30 text-[#6B72FF] border border-[#02066F] px-2.5 py-1 rounded-full">WordPress</span>
+            </div>
+            <p class="text-[#6B72FF] text-sm font-medium mb-3">Custom WordPress Travel Site</p>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+              A Nepal-focused travel brand needed a CMS-driven site to showcase and sell curated tour packages — each with pricing, duration, location, and imagery — without relying on a page builder.
+            </p>
+            <ul class="text-gray-400 text-xs space-y-1 mb-5">
+              <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> Custom CPT with archive &amp; single-tour templates (PHP)</li>
+              <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> ACF metadata badges — price, duration, location</li>
+              <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> Dynamically queried "Related Tours" section</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <% ["WordPress","PHP","GeneratePress","ACF","Tailwind CSS","Custom CSS","REST API"].forEach(t => { %>
+                <span class="bg-[#02066F]/30 text-[#8B8FFF] text-xs px-2.5 py-1 rounded-full border border-[#02066F]"><%= t %></span>
+              <% }) %>
+            </div>
+            <div class="flex flex-wrap gap-3 mt-auto">
+              <a href="#" class="text-xs font-semibold text-white bg-[#02066F] hover:bg-[#0309A8] px-4 py-2 rounded-lg transition-colors">Live Demo</a>
+              <a href="#" class="text-xs font-semibold text-gray-400 hover:text-white border border-gray-700 hover:border-[#02066F] px-4 py-2 rounded-lg transition-colors">GitHub</a>
+              <a href="/projects/himalaya-hearth" class="text-xs font-semibold text-[#6B72FF] hover:text-white border border-[#02066F] hover:border-[#6B72FF] px-4 py-2 rounded-lg transition-colors">Learn More →</a>
+            </div>
+          </div>
+
+          <!-- ── Project 3: Movie Reviews ── -->
+          <div class="flex flex-col bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-[#02066F] transition-colors group">
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <h3 class="text-xl font-bold text-white leading-snug">Movie Reviews</h3>
+              <span class="shrink-0 text-xs bg-[#02066F]/30 text-[#6B72FF] border border-[#02066F] px-2.5 py-1 rounded-full">ASP.NET Core</span>
+            </div>
+            <p class="text-[#6B72FF] text-sm font-medium mb-3">MVC Admin Application</p>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+              Multi-role movie catalog and review platform where admins manage content and critics submit scored reviews — featuring a centralized dashboard, soft-delete, and Azure Blob image uploads.
+            </p>
+            <ul class="text-gray-400 text-xs space-y-1 mb-5">
+              <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> Role-based auth (Admin, Critic) with ASP.NET Identity</li>
+              <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> Admin dashboard with aggregate stats</li>
+              <li class="flex items-center gap-2"><span class="text-[#6B72FF]">✓</span> EF Core + Dapper, Azure Blob Storage</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <% ["ASP.NET Core MVC","C#","EF Core","Dapper","SQL Server","Azure Blob","Identity"].forEach(t => { %>
+                <span class="bg-[#02066F]/30 text-[#8B8FFF] text-xs px-2.5 py-1 rounded-full border border-[#02066F]"><%= t %></span>
+              <% }) %>
+            </div>
+            <div class="flex flex-wrap gap-3 mt-auto">
+              <a href="#" class="text-xs font-semibold text-white bg-[#02066F] hover:bg-[#0309A8] px-4 py-2 rounded-lg transition-colors">Live Demo</a>
+              <a href="#" class="text-xs font-semibold text-gray-400 hover:text-white border border-gray-700 hover:border-[#02066F] px-4 py-2 rounded-lg transition-colors">GitHub</a>
+              <a href="/projects/movie-reviews" class="text-xs font-semibold text-[#6B72FF] hover:text-white border border-[#02066F] hover:border-[#6B72FF] px-4 py-2 rounded-lg transition-colors">Learn More →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ────────────────────────────────────────────────── -->
+    <section id="experience" class="py-24 px-6 bg-gray-900">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-white mb-12 text-center">Experience</h2>
+
+        <!-- Timeline -->
+        <div class="relative border-l-2 border-gray-800 pl-8 space-y-12">
+
+          <!-- Job 1 -->
+          <div class="relative">
+            <span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-gray-800 border-2 border-gray-900 ring-2 ring-[#02066F]"></span>
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+              <div>
+                <h3 class="text-lg font-bold text-white">Junior Back-End Developer</h3>
+                <p class="text-[#6B72FF] text-sm font-medium">SastoDeal — Kathmandu, Nepal</p>
+              </div>
+              <span class="text-gray-500 text-xs bg-gray-800 px-3 py-1 rounded-full">Dec 2021 – Oct 2022</span>
+            </div>
+            <ul class="text-gray-400 text-sm space-y-2 list-disc list-inside mt-3">
+              <li>Refactored legacy PHP services and SQL queries, reducing system crashes by <strong class="text-gray-200">25%</strong>.</li>
+              <li>Built and optimized REST API endpoints (PHP, MySQL, JSON), improving response times by <strong class="text-gray-200">20%</strong>.</li>
+              <li>Resolved <strong class="text-gray-200">95%</strong> of escalated tickets within a 4-hour SLA by triaging logs, profiling queries, and patching defects.</li>
+              <li>Followed secure coding and data privacy standards.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <% ["PHP","MySQL","REST/JSON","Linux","Git"].forEach(t => { %>
+                <span class="bg-gray-800 text-gray-400 text-xs px-2.5 py-1 rounded-full"><%= t %></span>
+              <% }) %>
+            </div>
+          </div>
+
+          <!-- Job 2 -->
+          <div class="relative">
+            <span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-gray-800 border-2 border-gray-900 ring-2 ring-[#02066F]"></span>
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+              <div>
+                <h3 class="text-lg font-bold text-white">Junior Web Developer</h3>
+                <p class="text-[#6B72FF] text-sm font-medium">Food Busters Pvt. Ltd — Pokhara, Nepal</p>
+              </div>
+              <span class="text-gray-500 text-xs bg-gray-800 px-3 py-1 rounded-full">Nov 2020 – Sep 2021</span>
+            </div>
+            <ul class="text-gray-400 text-sm space-y-2 list-disc list-inside mt-3">
+              <li>Built reusable React components, reducing development time by <strong class="text-gray-200">15%</strong>.</li>
+              <li>Shipped features <strong class="text-gray-200">two weeks early</strong> in a 3-person Agile team through tight sprint planning and code reviews.</li>
+              <li>Improved UI consistency and responsiveness across <strong class="text-gray-200">6+ pages</strong>.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <% ["React","JavaScript (ES6)","HTML","CSS3","Bootstrap","Tailwind","Git"].forEach(t => { %>
+                <span class="bg-gray-800 text-gray-400 text-xs px-2.5 py-1 rounded-full"><%= t %></span>
+              <% }) %>
+            </div>
+          </div>
+
+          <!-- Job 3 -->
+          <div class="relative">
+            <span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-gray-800 border-2 border-gray-900 ring-2 ring-[#02066F]"></span>
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+              <div>
+                <h3 class="text-lg font-bold text-white">IT Support Specialist</h3>
+                <p class="text-[#6B72FF] text-sm font-medium">Prabhu Technology Pvt. Ltd — Kathmandu, Nepal</p>
+              </div>
+              <span class="text-gray-500 text-xs bg-gray-800 px-3 py-1 rounded-full">Oct 2019 – Jul 2020</span>
+            </div>
+            <ul class="text-gray-400 text-sm space-y-2 list-disc list-inside mt-3">
+              <li>Managed user access and system permissions for <strong class="text-gray-200">100+ employees</strong> across Windows/Linux systems.</li>
+              <li>Diagnosed and resolved hardware, network, and application issues to ensure business continuity.</li>
+              <li>Implemented basic system security practices and documentation.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <% ["Windows","Linux","Networking","NTFS Permissions","VMware"].forEach(t => { %>
+                <span class="bg-gray-800 text-gray-400 text-xs px-2.5 py-1 rounded-full"><%= t %></span>
+              <% }) %>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EDUCATION ─────────────────────────────────────────────────── -->
+    <section id="education" class="py-24 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-white mb-12 text-center">Education</h2>
+        <div class="bg-gray-900 border border-gray-800 rounded-2xl p-8">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-5">
+            <div>
+              <h3 class="text-xl font-bold text-white">Diploma in Web Programming</h3>
+              <p class="text-[#6B72FF] font-medium mt-1">Nova Scotia Community College (NSCC)</p>
+            </div>
+            <span class="text-gray-500 text-xs bg-gray-800 px-3 py-1.5 rounded-full self-start">Expected May 2026</span>
+          </div>
+          <p class="text-gray-500 text-sm mb-4 font-semibold uppercase tracking-widest">Relevant Courses</p>
+          <div class="flex flex-wrap gap-2">
+            <% [
+              "Web Application Programming",
+              "Full-Stack Programming",
+              "Client-Side Programming",
+              "Object-Oriented Programming",
+              "Networking & Security",
+              "Linux Operating Systems"
+            ].forEach(c => { %>
+              <span class="bg-gray-800 text-gray-300 text-sm px-4 py-1.5 rounded-full"><%= c %></span>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CERTIFICATIONS ────────────────────────────────────────────── -->
+    <section id="certifications" class="py-24 px-6 bg-gray-900">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-white mb-4 text-center">Certifications</h2>
+        <p class="text-center text-gray-500 text-sm mb-12">LinkedIn Learning</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <% [
+            "Linux","REST APIs","JavaScript","NoSQL",
+            "Node.js","HTTP Essentials","Windows 10","Networking","PHP for WordPress"
+          ].forEach(cert => { %>
+            <div class="bg-gray-800 border border-gray-800 rounded-xl px-4 py-5 text-center hover:border-gray-700 transition-colors">
+              <p class="text-white text-sm font-medium"><%= cert %></p>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── VOLUNTEERING ──────────────────────────────────────────────── -->
+    <section class="py-24 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-white mb-12 text-center">Volunteering</h2>
+        <div class="bg-gray-900 border border-gray-800 rounded-2xl p-8 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <h3 class="text-lg font-bold text-white">IT Festival 2021 Nepal</h3>
+            <p class="text-[#6B72FF] text-sm mt-1">Volunteer — Technical Support</p>
+            <p class="text-gray-400 text-sm mt-3">Provided on-site technical assistance and troubleshooting.</p>
+          </div>
+          <span class="text-gray-500 text-xs bg-gray-800 px-3 py-1.5 rounded-full self-start">2021</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ───────────────────────────────────────────────────── -->
+    <section id="contact" class="py-24 px-6 bg-gray-900">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">Get in Touch</h2>
+        <p class="text-gray-400 mb-10">Open to new opportunities — feel free to reach out.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="mailto:Mahitkc@gmail.com"
+             class="px-8 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-xl font-semibold transition-colors">
+            Email Me
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+             class="px-8 py-3 border border-gray-800 hover:border-gray-700 text-gray-300 hover:text-white rounded-xl font-semibold transition-colors">
+            LinkedIn
+          </a>
+          <a href="https://github.com/MahitKC" target="_blank" rel="noopener noreferrer"
+             class="px-8 py-3 border border-gray-800 hover:border-gray-700 text-gray-300 hover:text-white rounded-xl font-semibold transition-colors">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ────────────────────────────────────────────────────── -->
+    <footer class="border-t border-gray-700 py-6 text-center text-sm text-gray-600">
+      &copy; <%= new Date().getFullYear() %> Mahit KC. Built with Express v5 &amp; Tailwind CSS v4.
+    </footer>
+
+  </body>
+</html>
