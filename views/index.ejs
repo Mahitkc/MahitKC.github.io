@@ -37,6 +37,7 @@
           <li><a href="#skills"><i class="bi bi-tools navicon"></i> Skills</a></li>
           <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
           <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Work Samples</a></li>
+          <li><a href="#gallery"><i class="bi bi-camera navicon"></i> Photography</a></li>
           <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
         </ul>
       </nav>
@@ -425,6 +426,85 @@
         </div>
       </div>
     </section><!-- /Portfolio -->
+
+    <!-- ── PHOTOGRAPHY GALLERY ─────────────────────────────────────── -->
+    <section id="gallery" class="gallery section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Photography</h2>
+        <p>A personal collection of moments captured through the lens.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <!-- Initial 4 portrait photos -->
+        <div class="row g-3 gallery-grid">
+          <% [
+            'IMG_2499.JPG',
+            'IMG_2507.JPG',
+            'IMG_3653.JPG',
+            'IMG_6553.JPG'
+          ].forEach((photo, i) => { %>
+            <div class="col-lg-3 col-md-6 col-6 gallery-item" data-aos="zoom-in" data-aos-delay="<%= i * 75 %>">
+              <a href="/gallery/<%= encodeURIComponent(photo) %>" class="glightbox" data-gallery="photography">
+                <img src="/gallery/<%= encodeURIComponent(photo) %>" alt="Photography by Mahit KC" class="img-fluid" loading="lazy">
+              </a>
+            </div>
+          <% }) %>
+        </div>
+
+        <!-- Hidden extra photos -->
+        <div class="row g-3 gallery-grid mt-3" id="gallery-extra" style="display:none;">
+          <% [
+            '839EE554-D179-4E5D-8F06-35532EB8B7E4.JPG',
+            'IMG-144709ba73fff16c15e451217c9f4b6d-V.JPG',
+            'IMG_0808.JPG',
+            'IMG_2529.JPG',
+            'IMG_2531.JPG',
+            'IMG_2601.JPG',
+            'IMG_3660 (1).JPG',
+            'IMG_1033.jpg',
+            'IMG_1106.jpg',
+            'IMG_1316.jpg',
+            'IMG_1318.jpg',
+            'IMG_0779.jpeg',
+            'IMG_1002.jpeg',
+            '20191101_132153.JPG',
+            'IMG-b14638863c7a176d6fe7cc8c43237079-V.JPG',
+            'IMG-e68e4d051918b473bf19a7081d06017d-V.JPG',
+            'IMG-fbd51d8e7f56ff2b520de5aed1c7e3ad-V.JPG',
+            'IMG_2419.JPG',
+            'IMG_3642.JPG',
+            'IMG_3705_(1).JPG',
+            'IMG_5036.JPG',
+            'IMG_5042.JPG',
+            'IMG_5050.JPG'
+          ].forEach((photo) => { %>
+            <div class="col-lg-3 col-md-6 col-6 gallery-item">
+              <a href="/gallery/<%= encodeURIComponent(photo) %>" class="glightbox" data-gallery="photography">
+                <img src="/gallery/<%= encodeURIComponent(photo) %>" alt="Photography by Mahit KC" class="img-fluid" loading="lazy">
+              </a>
+            </div>
+          <% }) %>
+        </div>
+
+        <div class="text-center mt-4">
+          <button id="gallery-toggle-btn" class="gallery-toggle-btn" onclick="toggleGallery()">
+            <i class="bi bi-images me-2"></i> See More Photos
+          </button>
+        </div>
+      </div>
+    </section><!-- /Gallery -->
+
+    <script>
+      function toggleGallery() {
+        const extra = document.getElementById('gallery-extra');
+        const btn = document.getElementById('gallery-toggle-btn');
+        const isHidden = extra.style.display === 'none';
+        extra.style.display = isHidden ? '' : 'none';
+        btn.innerHTML = isHidden
+          ? '<i class="bi bi-chevron-up me-2"></i> Show Less'
+          : '<i class="bi bi-images me-2"></i> See More Photos';
+      }
+    </script>
 
     <!-- ── CONTACT ────────────────────────────────────────────────────── -->
     <section id="contact" class="contact section">
