@@ -16,6 +16,7 @@ app.set('views', join(__dirname, 'views'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(join(__dirname, 'public')))
+app.use('/images', express.static(join(__dirname, 'images')))
 
 // Routes
 app.get('/', (req, res) => {
