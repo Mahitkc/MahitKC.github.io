@@ -673,6 +673,7 @@ section,
 .hero .social-links {
   display: flex;
   gap: 20px;
+  justify-content: center;
 }
 
 .hero .social-links a {
