@@ -436,25 +436,12 @@
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <!-- Initial 4 portrait photos -->
-        <div class="row g-3 gallery-grid">
+        <div class="gallery-masonry-grid" id="gallery-masonry">
           <% [
             'IMG_2499.JPG',
             'IMG_2507.JPG',
             'IMG_3653.JPG',
-            'IMG_6553.JPG'
-          ].forEach((photo, i) => { %>
-            <div class="col-lg-3 col-md-6 col-6 gallery-item" data-aos="zoom-in" data-aos-delay="<%= i * 75 %>">
-              <a href="/gallery/<%= encodeURIComponent(photo) %>" class="glightbox" data-gallery="photography">
-                <img src="/gallery/<%= encodeURIComponent(photo) %>" alt="Photography by Mahit KC" class="img-fluid" loading="lazy">
-              </a>
-            </div>
-          <% }) %>
-        </div>
-
-        <!-- Hidden extra photos -->
-        <div class="row g-3 gallery-grid mt-3" id="gallery-extra" style="display:none;">
-          <% [
+            'IMG_6553.JPG',
             '839EE554-D179-4E5D-8F06-35532EB8B7E4.JPG',
             'IMG-144709ba73fff16c15e451217c9f4b6d-V.JPG',
             'IMG_0808.JPG',
@@ -479,32 +466,31 @@
             'IMG_5042.JPG',
             'IMG_5050.JPG'
           ].forEach((photo) => { %>
-            <div class="col-lg-3 col-md-6 col-6 gallery-item">
+            <div class="gallery-item">
               <a href="/gallery/<%= encodeURIComponent(photo) %>" class="glightbox" data-gallery="photography">
-                <img src="/gallery/<%= encodeURIComponent(photo) %>" alt="Photography by Mahit KC" class="img-fluid" loading="lazy">
+                <img src="/gallery/<%= encodeURIComponent(photo) %>" alt="Photography by Mahit KC" loading="lazy">
+                <div class="gallery-overlay">
+                  <i class="bi bi-zoom-in"></i>
+                </div>
               </a>
             </div>
           <% }) %>
-        </div>
-
-        <div class="text-center mt-4">
-          <button id="gallery-toggle-btn" class="gallery-toggle-btn" onclick="toggleGallery()">
-            <i class="bi bi-images me-2"></i> See More Photos
-          </button>
         </div>
       </div>
     </section><!-- /Gallery -->
 
     <script>
-      function toggleGallery() {
-        const extra = document.getElementById('gallery-extra');
-        const btn = document.getElementById('gallery-toggle-btn');
-        const isHidden = extra.style.display === 'none';
-        extra.style.display = isHidden ? '' : 'none';
-        btn.innerHTML = isHidden
-          ? '<i class="bi bi-chevron-up me-2"></i> Show Less'
-          : '<i class="bi bi-images me-2"></i> See More Photos';
-      }
+      (function () {
+        var grid = document.getElementById('gallery-masonry');
+        if (!grid) return;
+        imagesLoaded(grid, function () {
+          new Isotope(grid, {
+            itemSelector: '.gallery-item',
+            layoutMode: 'masonry',
+            masonry: { columnWidth: '.gallery-item', gutter: 12 }
+          });
+        });
+      })();
     </script>
 
     <!-- ── CONTACT ────────────────────────────────────────────────────── -->
