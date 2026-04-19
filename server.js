@@ -21,7 +21,7 @@ app.use('/gallery', express.static(join(__dirname, 'Gallery')))
 
 // Routes
 app.get('/', (req, res) => {
-  res.render('index', { title: 'Mahit KC — Web Developer' })
+  res.render('index', { title: 'Mahit KC — Full-Stack Developer' })
 })
 
 app.get('/projects/waitwell', (req, res) => {
