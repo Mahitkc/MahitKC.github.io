@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MK split favicon">
+  <defs>
+    <linearGradient id="split-a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f1f1f"/>
+      <stop offset="100%" stop-color="#2a2a2a"/>
+    </linearGradient>
+    <linearGradient id="split-b" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#323232"/>
+      <stop offset="100%" stop-color="#232323"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="32" cy="32" r="30" fill="url(#split-a)"/>
+  <path d="M8 56 L56 8 A30 30 0 0 1 56 56 Z" fill="url(#split-b)"/>
+  <circle cx="32" cy="32" r="27.5" fill="none" stroke="#8c9ab0" stroke-width="2.6"/>
+  <circle cx="51.5" cy="13.5" r="3.2" fill="#8c9ab0"/>
+
+  <text x="50%" y="52%" text-anchor="middle" dominant-baseline="middle"
+        font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif"
+        font-size="34" font-weight="900" letter-spacing="-2.2"
+        fill="#ffffff">MK</text>
+</svg>

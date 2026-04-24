@@ -21,19 +21,27 @@ app.use('/gallery', express.static(join(__dirname, 'Gallery')))
 
 // Routes
 app.get('/', (req, res) => {
-  res.render('index', { title: 'Mahit KC — Full-Stack Developer' })
+  res.render('index', {
+    title: 'Mahit KC — Full-Stack Developer'
+  })
 })
 
 app.get('/projects/waitwell', (req, res) => {
-  res.render('projects/waitwell', { title: 'WaitWell — Mahit KC' })
+  res.render('projects/waitwell', {
+    title: 'WaitWell — Mahit KC'
+  })
 })
 
 app.get('/projects/himalaya-hearth', (req, res) => {
-  res.render('projects/himalaya-hearth', { title: 'Himalaya Hearth — Mahit KC' })
+  res.render('projects/himalaya-hearth', {
+    title: 'Himalaya Hearth — Mahit KC'
+  })
 })
 
 app.get('/projects/movie-reviews', (req, res) => {
-  res.render('projects/movie-reviews', { title: 'Movie Reviews — Mahit KC' })
+  res.render('projects/movie-reviews', {
+    title: 'Movie Reviews — Mahit KC'
+  })
 })
 
 // API route

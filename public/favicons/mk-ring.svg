@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MK ring favicon">
+  <defs>
+    <linearGradient id="ring-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f1f1f"/>
+      <stop offset="100%" stop-color="#2c2c2c"/>
+    </linearGradient>
+    <linearGradient id="ring-accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8c9ab0"/>
+      <stop offset="100%" stop-color="#6f7f97"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="32" cy="32" r="30" fill="url(#ring-bg)"/>
+  <circle cx="32" cy="32" r="27.5" fill="none" stroke="url(#ring-accent)" stroke-width="3"/>
+
+  <text x="50%" y="52%" text-anchor="middle" dominant-baseline="middle"
+        font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif"
+        font-size="35" font-weight="900" letter-spacing="-2.4"
+        fill="#ffffff">MK</text>
+</svg>

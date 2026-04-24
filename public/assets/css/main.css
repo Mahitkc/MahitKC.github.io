@@ -188,6 +188,41 @@ h6 {
   background: var(--accent-color);
 }
 
+.header .resume-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: color-mix(in srgb, var(--accent-color), transparent 85%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 40%);
+  border-radius: 6px;
+  color: var(--accent-color);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.3s, border-color 0.3s, color 0.3s, box-shadow 0.3s;
+  white-space: nowrap;
+}
+
+.header .resume-download-btn i {
+  font-size: 15px;
+  line-height: 1;
+  transition: transform 0.3s;
+}
+
+.header .resume-download-btn:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--contrast-color);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--accent-color), transparent 55%);
+}
+
+.header .resume-download-btn:hover i {
+  transform: translateY(2px);
+}
+
 @media (min-width: 1200px) {
 
   .header~main,
