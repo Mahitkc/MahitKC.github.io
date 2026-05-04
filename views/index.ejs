@@ -472,8 +472,8 @@
             'IMG_5036.JPG',
             'IMG_5042.JPG',
             'IMG_5050.JPG'
-          ].forEach((photo) => { %>
-            <div class="gallery-item">
+          ].forEach((photo, index) => { %>
+            <div class="gallery-item" data-gallery-index="<%= index %>">
               <a href="/gallery/<%= encodeURIComponent(photo) %>" class="glightbox" data-gallery="photography">
                 <img src="/gallery/<%= encodeURIComponent(photo) %>" alt="Photography by Mahit KC" loading="lazy">
                 <div class="gallery-overlay">
@@ -483,19 +483,37 @@
             </div>
           <% }) %>
         </div>
+        <div class="gallery-actions">
+          <button id="gallery-toggle" class="btn btn-outline" type="button">Show More</button>
+        </div>
       </div>
     </section><!-- /Gallery -->
 
     <script>
       (function () {
         var grid = document.getElementById('gallery-masonry');
-        if (!grid) return;
-        imagesLoaded(grid, function () {
-          new Isotope(grid, {
-            itemSelector: '.gallery-item',
-            layoutMode: 'masonry',
-            masonry: { columnWidth: '.gallery-item', gutter: 12 }
+        var toggleBtn = document.getElementById('gallery-toggle');
+        if (!grid || !toggleBtn) return;
+
+        var items = Array.prototype.slice.call(grid.querySelectorAll('.gallery-item'));
+        var initialCount = 8;
+        var expanded = false;
+
+        function updateVisibility() {
+          items.forEach(function (item, idx) {
+            item.classList.toggle('gallery-item-hidden', !expanded && idx >= initialCount);
           });
+          toggleBtn.textContent = expanded ? 'Show Less' : 'Show More';
+        }
+
+        updateVisibility();
+
+        toggleBtn.addEventListener('click', function () {
+          expanded = !expanded;
+          updateVisibility();
+          if (!expanded) {
+            document.getElementById('gallery').scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
         });
       })();
     </script>
