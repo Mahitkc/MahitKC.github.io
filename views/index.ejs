@@ -484,38 +484,48 @@
           <% }) %>
         </div>
         <div class="gallery-actions">
-          <button id="gallery-toggle" class="btn btn-outline" type="button">Show More</button>
+          <button id="gallery-toggle" class="btn btn-outline" type="button" aria-expanded="false">Show More</button>
         </div>
       </div>
     </section><!-- /Gallery -->
 
     <script>
-      (function () {
-        var grid = document.getElementById('gallery-masonry');
-        var toggleBtn = document.getElementById('gallery-toggle');
-        if (!grid || !toggleBtn) return;
+      window.addEventListener('load', function() {
+        (function () {
+          var grid = document.getElementById('gallery-masonry');
+          var toggleBtn = document.getElementById('gallery-toggle');
+          if (!grid || !toggleBtn) return;
 
-        var items = Array.prototype.slice.call(grid.querySelectorAll('.gallery-item'));
-        var initialCount = 8;
-        var expanded = false;
+          var items = Array.prototype.slice.call(grid.querySelectorAll('.gallery-item'));
+          var initialCount = 8;
+          var expanded = false;
 
-        function updateVisibility() {
-          items.forEach(function (item, idx) {
-            item.classList.toggle('gallery-item-hidden', !expanded && idx >= initialCount);
-          });
-          toggleBtn.textContent = expanded ? 'Show Less' : 'Show More';
-        }
-
-        updateVisibility();
-
-        toggleBtn.addEventListener('click', function () {
-          expanded = !expanded;
-          updateVisibility();
-          if (!expanded) {
-            document.getElementById('gallery').scrollIntoView({ behavior: 'smooth', block: 'start' });
+          function updateVisibility() {
+            items.forEach(function (item, idx) {
+              item.classList.toggle('gallery-item-hidden', !expanded && idx >= initialCount);
+            });
+            toggleBtn.textContent = expanded ? 'Show Less' : 'Show More';
+            toggleBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
           }
-        });
-      })();
+
+          updateVisibility();
+
+          // Delegated click handler to be resilient on mobile/animated DOM
+          document.addEventListener('click', function (e) {
+            var btn = e.target.closest && e.target.closest('#gallery-toggle');
+            if (!btn) return;
+            expanded = !expanded;
+            updateVisibility();
+            if (!expanded) {
+              document.getElementById('gallery').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+              setTimeout(function () {
+                grid.scrollIntoView({ behavior: 'smooth', block: 'end' });
+              }, 150);
+            }
+          }, false);
+        })();
+      });
     </script>
 
     <!-- ── CONTACT ────────────────────────────────────────────────────── -->

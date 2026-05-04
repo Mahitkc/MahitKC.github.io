@@ -2358,6 +2358,8 @@ section,
   color: var(--accent-color);
   border: 2px solid var(--accent-color);
   transition: background 0.3s, color 0.3s;
+  position: relative;
+  z-index: 10;
 }
 
 .gallery-actions .btn:hover {
