@@ -1,0 +1,112 @@
+<%- include('../partials/project-header', { title: title, pageTitle: 'Smart Treadmill', description: 'Smart Treadmill — Next.js SaaS Application by Mahit KC' }) %>
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+
+          <!-- Swiper image slider -->
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                { "loop": true, "speed": 600, "autoplay": { "delay": 5000 }, "slidesPerView": "auto", "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
+              </script>
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img src="/images/Smart Treadmill/Display Photo.png" alt="Smart Treadmill - Display" class="img-fluid" loading="lazy">
+                </div>
+                <div class="swiper-slide">
+                  <img src="/images/Smart Treadmill/Login Page.png" alt="Smart Treadmill - Login Page" class="img-fluid" loading="lazy">
+                </div>
+                <div class="swiper-slide">
+                  <img src="/images/Smart Treadmill/Preset Page.png" alt="Smart Treadmill - Preset Page" class="img-fluid" loading="lazy">
+                </div>
+                <div class="swiper-slide">
+                  <img src="/images/Smart Treadmill/Videos Page.png" alt="Smart Treadmill - Videos Page" class="img-fluid" loading="lazy">
+                </div>
+                <div class="swiper-slide">
+                  <img src="/images/Smart Treadmill/More page.png" alt="Smart Treadmill - More Page" class="img-fluid" loading="lazy">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <!-- Project info sidebar -->
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-left" data-aos-delay="200">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong>: Work-Term / Full-Stack</li>
+                <li><strong>Tech Stack</strong>: Next.js 16, React 19, TypeScript, Tailwind CSS 4</li>
+                <li><strong>Role</strong>: Full-Stack Developer</li>
+                <li><strong>Duration</strong>: Work Term (Spring 2026)</li>
+                <li><strong>Organization</strong>: Nova Scotia Community College (NSCC)</li>
+                <li><strong>GitHub</strong>: <a href="https://github.com/NSCC-workterm-treadmill-2023/treadmill-frontend-v2" target="_blank" rel="noopener noreferrer">View Repo</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Full description -->
+          <div class="col-lg-12">
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Smart Treadmill — Next.js SaaS Application</h2>
+              <p>Smart Treadmill is a modern, full-featured SaaS application built as part of my work term at Nova Scotia Community College. The project demonstrates professional-grade React and Next.js development with a comprehensive tech stack, robust tooling, and team collaboration practices.</p>
+              <p>As a full-stack developer, I contributed to the application architecture, component development, API integration, and deployment. The project showcases modern web development best practices including TypeScript for type safety, Tailwind CSS for responsive design, and automated testing with Vitest.</p>
+
+              <div class="features mt-4">
+                <h3>Key Features</h3>
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                      <i class="bi bi-layout-three-columns"></i>
+                      <h4>Next.js App Router</h4>
+                      <p>Modern routing with server components, API routes, and organized route groups for public, auth, admin, and dashboard sections.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
+                      <i class="bi bi-code"></i>
+                      <h4>TypeScript & React 19</h4>
+                      <p>Type-safe development with React 19, ensuring robust code quality and early error detection.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
+                      <i class="bi bi-palette"></i>
+                      <h4>Responsive Design</h4>
+                      <p>Tailwind CSS v4 with utility-first styling for fast, consistent, and mobile-responsive UI development.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="700">
+                      <i class="bi bi-bug"></i>
+                      <h4>Testing & Quality</h4>
+                      <p>Vitest and Testing Library for comprehensive unit tests, with ESLint and Prettier for code quality enforcement.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <h3>Tech Stack</h3>
+                <p>Next.js 16 (App Router) &bull; React 19 &bull; TypeScript &bull; Tailwind CSS v4 &bull; Drizzle ORM &bull; SQLite &bull; Vitest &bull; React Testing Library &bull; ESLint &bull; Prettier &bull; Husky &bull; commitlint &bull; GitHub Actions &bull; Dev Containers</p>
+              </div>
+
+              <div class="mt-4">
+                <h3>Development Practices</h3>
+                <p><strong>Code Quality:</strong> Enforced with ESLint, Prettier, and Husky git hooks. <strong>Commits:</strong> Standardized using commitlint for conventional commit messages. <strong>Testing:</strong> Automated test suite with coverage reporting. <strong>CI/CD:</strong> GitHub Actions workflows for automated testing and quality checks on every pull request. <strong>Dev Environment:</strong> Dev Container configuration for consistent team development setup.</p>
+              </div>
+
+              <div class="mt-4">
+                <h3>Outcome</h3>
+                <p>Delivered a scalable, well-architected SaaS application that serves as a production-ready template for the team. The project demonstrates end-to-end full-stack development capabilities, from database schema design to responsive UI components, integrated with professional development tooling and CI/CD practices.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+<%- include('../partials/project-footer') %>

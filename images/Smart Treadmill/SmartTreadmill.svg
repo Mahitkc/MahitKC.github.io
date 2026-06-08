@@ -1,0 +1,108 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8e8e8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#d0d0d0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d0d0d0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="blackGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a2a2a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  
+  <!-- Shadow on ground -->
+  <ellipse cx="400" cy="560" rx="280" ry="30" fill="rgba(0,0,0,0.15)"/>
+  
+  <!-- Treadmill Frame - Left Side -->
+  <rect x="80" y="320" width="40" height="220" rx="8" fill="url(#metalGrad)" stroke="#999" stroke-width="1" filter="url(#shadow)"/>
+  
+  <!-- Treadmill Frame - Right Side -->
+  <rect x="680" y="320" width="40" height="220" rx="8" fill="url(#metalGrad)" stroke="#999" stroke-width="1" filter="url(#shadow)"/>
+  
+  <!-- Front Support - Left -->
+  <path d="M 100 540 L 120 320" stroke="url(#metalGrad)" stroke-width="8" fill="none" stroke-linecap="round"/>
+  
+  <!-- Front Support - Right -->
+  <path d="M 700 540 L 680 320" stroke="url(#metalGrad)" stroke-width="8" fill="none" stroke-linecap="round"/>
+  
+  <!-- Treadmill Base Platform -->
+  <rect x="120" y="380" width="560" height="160" rx="12" fill="#1a1a1a" stroke="#333" stroke-width="2" filter="url(#shadow)"/>
+  
+  <!-- Treadmill Running Belt -->
+  <ellipse cx="400" cy="400" rx="260" ry="45" fill="url(#blackGrad)" stroke="#2a2a2a" stroke-width="2"/>
+  
+  <!-- Belt Stripes (motion effect) -->
+  <line x1="150" y1="400" x2="180" y2="400" stroke="#444" stroke-width="3" opacity="0.6"/>
+  <line x1="220" y1="400" x2="250" y2="400" stroke="#444" stroke-width="3" opacity="0.6"/>
+  <line x1="290" y1="400" x2="320" y2="400" stroke="#444" stroke-width="3" opacity="0.6"/>
+  <line x1="360" y1="400" x2="390" y2="400" stroke="#444" stroke-width="3" opacity="0.6"/>
+  <line x1="430" y1="400" x2="460" y2="400" stroke="#444" stroke-width="3" opacity="0.6"/>
+  <line x1="500" y1="400" x2="530" y2="400" stroke="#444" stroke-width="3" opacity="0.6"/>
+  <line x1="570" y1="400" x2="600" y2="400" stroke="#444" stroke-width="3" opacity="0.6"/>
+  <line x1="640" y1="400" x2="670" y2="400" stroke="#444" stroke-width="3" opacity="0.6"/>
+  
+  <!-- Belt Rollers -->
+  <circle cx="150" cy="400" r="18" fill="#505050" stroke="#333" stroke-width="2"/>
+  <circle cx="650" cy="400" r="18" fill="#505050" stroke="#333" stroke-width="2"/>
+  
+  <!-- Roller details -->
+  <circle cx="150" cy="400" r="14" fill="none" stroke="#666" stroke-width="1" opacity="0.5"/>
+  <circle cx="650" cy="400" r="14" fill="none" stroke="#666" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Console/Display - mounted at top -->
+  <rect x="300" y="200" width="200" height="120" rx="8" fill="#222" stroke="#444" stroke-width="2" filter="url(#shadow)"/>
+  
+  <!-- Console bezel -->
+  <rect x="310" y="210" width="180" height="100" rx="6" fill="#111" stroke="#555" stroke-width="1"/>
+  
+  <!-- Screen display -->
+  <rect x="320" y="220" width="160" height="60" rx="4" fill="#003300" stroke="#00aa00" stroke-width="1"/>
+  
+  <!-- Display text -->
+  <text x="330" y="240" font-size="11" fill="#00ff00" font-family="monospace" font-weight="bold">Speed: 8.5</text>
+  <text x="330" y="257" font-size="11" fill="#00ff00" font-family="monospace" font-weight="bold">Time: 36:45</text>
+  <text x="330" y="274" font-size="11" fill="#00ff00" font-family="monospace" font-weight="bold">Cal: 420</text>
+  
+  <!-- Console buttons -->
+  <circle cx="330" cy="295" r="6" fill="#666" stroke="#999" stroke-width="1"/>
+  <circle cx="360" cy="295" r="6" fill="#666" stroke="#999" stroke-width="1"/>
+  <circle cx="390" cy="295" r="6" fill="#666" stroke="#999" stroke-width="1"/>
+  <circle cx="420" cy="295" r="6" fill="#666" stroke="#999" stroke-width="1"/>
+  <circle cx="450" cy="295" r="6" fill="#666" stroke="#999" stroke-width="1"/>
+  <circle cx="480" cy="295" r="6" fill="#666" stroke="#999" stroke-width="1"/>
+  
+  <!-- Left Handle -->
+  <path d="M 110 320 Q 100 260 130 220" stroke="url(#metalGrad)" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#shadow)"/>
+  <circle cx="130" cy="220" r="20" fill="#333" stroke="#555" stroke-width="2"/>
+  
+  <!-- Right Handle -->
+  <path d="M 690 320 Q 700 260 670 220" stroke="url(#metalGrad)" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#shadow)"/>
+  <circle cx="670" cy="220" r="20" fill="#333" stroke="#555" stroke-width="2"/>
+  
+  <!-- Incline adjustment -->
+  <rect x="180" y="520" width="50" height="12" rx="6" fill="#666" stroke="#999" stroke-width="1"/>
+  <text x="215" y="532" font-size="10" text-anchor="middle" fill="#fff">Incline</text>
+  
+  <!-- Speed adjustment -->
+  <rect x="570" y="520" width="50" height="12" rx="6" fill="#666" stroke="#999" stroke-width="1"/>
+  <text x="605" y="532" font-size="10" text-anchor="middle" fill="#fff">Speed</text>
+  
+  <!-- Title and description -->
+  <text x="400" y="50" font-size="28" font-weight="bold" text-anchor="middle" fill="#000" font-family="Arial, sans-serif">
+    Smart Treadmill
+  </text>
+  <text x="400" y="85" font-size="13" text-anchor="middle" fill="#333" font-family="Arial, sans-serif">
+    Next.js SaaS Application | NSCC Work-Term Project
+  </text>
+</svg>

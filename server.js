@@ -44,6 +44,12 @@ app.get('/projects/movie-reviews', (req, res) => {
   })
 })
 
+app.get('/projects/smart-treadmill', (req, res) => {
+  res.render('projects/smart-treadmill', {
+    title: 'Smart Treadmill — Mahit KC'
+  })
+})
+
 // API route
 app.get('/api/hello', (req, res) => {
   res.json({ message: 'Hello from Express v5!' })
