@@ -1,4 +1,4 @@
-<%- include('../partials/project-header', { title: title, pageTitle: 'WaitWell', description: 'WaitWell — Patient Communication & Queue Management Platform by Mahit KC' }) %>
+<%- include('../partials/project-header', { title: title, pageTitle: 'WaitWell', description: 'WaitWell — Patient communication SaaS platform by Mahit KC' }) %>
 
     <!-- Portfolio Details Section -->
     <section id="portfolio-details" class="portfolio-details section">
@@ -26,7 +26,7 @@
               <h3>Project Information</h3>
               <ul>
                 <li><strong>Category</strong>: SaaS / Full-Stack</li>
-                <li><strong>Tech Stack</strong>: Next.js 16, TypeScript, Supabase, Stripe</li>
+                <li><strong>Tech Stack</strong>: Next.js, TypeScript, Supabase, Tailwind CSS</li>
                 <li><strong>Role</strong>: Full-Stack Developer &amp; Maintainer</li>
                 <li><strong>Status</strong>: Production-ready</li>
                 <li><strong>GitHub</strong>: <a href="https://github.com/NSCC-ITC-Winter2026-WEBD3031-700-MCa/project-waitwell" target="_blank" rel="noopener noreferrer">View Repo</a></li>
@@ -37,9 +37,9 @@
           <!-- Full description -->
           <div class="col-lg-12">
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>WaitWell — Patient Communication &amp; Queue Management Platform</h2>
-              <p>Hospital patients and their families often experience significant anxiety because they have no visibility into where they are in the care process — whether they're waiting for a doctor, a test, or discharge. WaitWell solves this by providing a real-time visit progress tracker that keeps patients informed at every step, reducing uncertainty and improving the overall care experience.</p>
-              <p>As the full-stack developer and project maintainer, I was responsible for the complete architecture and implementation: the real-time dashboard, AI-powered health chat with per-user rate limiting, Supabase database schema with Row-Level Security, Stripe subscription billing, admin dashboard with RBAC, Web Push notifications, and a full CI/CD pipeline with automated testing on every PR.</p>
+              <h2>WaitWell — Patient Communication SaaS Platform</h2>
+              <p>WaitWell is a full-stack SaaS application focused on real-time patient communication and visit tracking. The project was built to reduce uncertainty by giving patients, staff, and administrators a clearer view of the care process.</p>
+              <p>As the full-stack developer and project maintainer, I implemented role-based system authentication, Supabase-backed data handling, responsive UI components, and production-ready delivery workflows with CI/CD, branch protection, code reviews, and automated testing.</p>
 
               <div class="features mt-4">
                 <h3>Key Features</h3>
@@ -47,29 +47,29 @@
                   <div class="col-md-6">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
                       <i class="bi bi-person-check-fill"></i>
-                      <h4>Multi-Role Authentication</h4>
-                      <p>Patient and Admin roles via ASP.NET Core Identity with RBAC — each role sees only what they're permitted to access.</p>
+                      <h4>Role-Based Authentication</h4>
+                      <p>Built authentication and authorization flows so patients, staff, and administrators could access the right parts of the platform.</p>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
-                      <i class="bi bi-robot"></i>
-                      <h4>AI Health Chat</h4>
-                      <p>OpenRouter API (Claude model) with Vercel AI SDK — rate-limited per user to prevent abuse.</p>
+                      <i class="bi bi-arrow-repeat"></i>
+                      <h4>Real-Time Visit Tracking</h4>
+                      <p>Delivered a live patient communication flow so users could see progress and status updates during their visit.</p>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
-                      <i class="bi bi-credit-card"></i>
-                      <h4>Stripe Subscription Billing</h4>
-                      <p>Gated subscription tiers managed through Stripe with webhook-driven access control.</p>
+                      <i class="bi bi-database-fill"></i>
+                      <h4>Supabase Data Layer</h4>
+                      <p>Used Supabase to manage application data and keep the platform structured for production use.</p>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="700">
                       <i class="bi bi-github"></i>
                       <h4>CI/CD &amp; Testing</h4>
-                      <p>GitHub Actions pipeline with Vitest and React Testing Library — full unit test coverage of core logic and components.</p>
+                      <p>CI/CD workflows, branch protection, code reviews, and automated tests supported a production-ready release process.</p>
                     </div>
                   </div>
                 </div>
@@ -77,12 +77,12 @@
 
               <div class="mt-4">
                 <h3>Tech Stack</h3>
-                <p>Next.js 16 (App Router) &bull; TypeScript &bull; Tailwind CSS v4 &bull; shadcn/ui &bull; Supabase (PostgreSQL + RLS + Auth) &bull; OpenRouter AI &bull; Vercel AI SDK &bull; Stripe &bull; Web Push API &bull; Vitest &bull; React Testing Library &bull; GitHub Actions &bull; ESLint &bull; Prettier &bull; Husky &bull; commitlint</p>
+                <p>Next.js &bull; TypeScript &bull; Supabase &bull; Tailwind CSS &bull; Vitest &bull; ESLint &bull; Prettier &bull; GitHub Actions</p>
               </div>
 
               <div class="mt-4">
                 <h3>Outcome</h3>
-                <p>Delivered a production-ready, fully tested SaaS platform deployed on Vercel. The system successfully handles real-time queue updates, AI-assisted patient communication, and Stripe-gated subscription access — demonstrating end-to-end full-stack ownership from architecture through CI/CD.</p>
+                <p>Delivered a production-ready SaaS platform that demonstrates end-to-end full-stack ownership, from role-based authentication and data handling through CI/CD and automated testing.</p>
               </div>
             </div>
           </div>

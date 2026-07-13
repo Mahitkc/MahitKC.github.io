@@ -18,6 +18,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.static(join(__dirname, 'public')))
 app.use('/images', express.static(join(__dirname, 'images')))
 app.use('/gallery', express.static(join(__dirname, 'Gallery')))
+app.use('/files', express.static(join(__dirname, ' Files')))
 
 // Routes
 app.get('/', (req, res) => {

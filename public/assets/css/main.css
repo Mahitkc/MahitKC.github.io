@@ -1262,7 +1262,7 @@ section,
 --------------------------------------------------------------*/
 .skills .skills-category {
   background-color: var(--surface-color);
-  padding: 30px;
+  padding: 18px 20px;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   height: 100%;
@@ -1274,10 +1274,10 @@ section,
 }
 
 .skills .skills-category h3 {
-  font-size: 24px;
-  margin-bottom: 25px;
+  font-size: 18px;
+  margin-bottom: 14px;
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .skills .skills-category h3:after {
@@ -1290,8 +1290,14 @@ section,
   background-color: var(--accent-color);
 }
 
+.skills .skills-animation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .skills .skill-item {
-  margin-bottom: 25px;
+  margin-bottom: 0;
 }
 
 .skills .skill-item:last-child {
@@ -1299,8 +1305,15 @@ section,
 }
 
 .skills .skill-item h4 {
-  font-size: 16px;
-  margin-bottom: 8px;
+  font-size: 13px;
+  margin-bottom: 0;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
 .skills .skill-item .skill-percentage {
@@ -1396,6 +1409,10 @@ section,
 }
 
 @media (max-width: 767.98px) {
+  .skills .skills-category {
+    padding: 16px;
+  }
+
   .skills .skill-box {
     margin-bottom: 20px;
   }
